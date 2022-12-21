@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+    "fust_tutorials",
+    "timer_future",
+    "executor",
+    "future_learn",
+]
