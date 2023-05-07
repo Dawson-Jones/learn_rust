@@ -60,7 +60,7 @@ fn label() {
     'counting_up: loop {    // break `counting_up 从该层循环退出
         let mut j =  1;
         loop {
-            if i >= 2 {
+            if i > 2 {
                 break 'counting_up;
             }
 
@@ -1190,7 +1190,7 @@ fn main() {
     // 4. 控制流
     judge(-2);
     cycle();
-    // label();
+    label();
     // use_while();
     for_in();
 
