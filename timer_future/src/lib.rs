@@ -17,7 +17,6 @@ pub struct TimerFuture {
 }
 
 
-
 impl Future for TimerFuture {
     type Output = ();
 
@@ -26,6 +25,7 @@ impl Future for TimerFuture {
         if shared_state.completed {
             Poll::Ready(())
         } else {
+            // 当状态变化时可以调用 waker 唤醒 executor
             shared_state.waker = Some(cx.waker().clone());
             Poll::Pending
         }
